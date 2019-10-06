@@ -1,0 +1,17 @@
+# In this folder  we can specify what we don't want to go into our github
+
+
+# Created by https://www.gitignore.io/api/django
+# Edit at https://www.gitignore.io/?templates=django
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+/media
+/static
+#What does the two above two mean?
