@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
+    'jobs.apps.JobsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# here we have decied how the media is to be stored - when fx an image is uploaded through the model we created
+# the model we created will make an images folder in the media
+# since we have set media in gitignore, it's not gonna upload all the media
+MEDIA_URL = '/media/'
+# so this is where we can access the media we have stored
