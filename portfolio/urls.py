@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+# Note in the above we import settings, where we have specified how the media should be stored
+from django.conf.urls.static import static
+# static is an app that allows us to serve up pocutres
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# Here we create  a path so we can see the picture in jobs from admin ui
